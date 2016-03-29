@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<header><title>Photos</title></header>
+<body>
+    <script src="server.js"></script>
+    Espace Photos
+    <br>
+    <% for(var i=0; i<photos.length; i++) {%>
+        <div>
+             <tr>
+                <td><%= photos[i].idphotos %></td>
+                <td><%= photos[i].lien %></td>
+                <td><%= photos[i].description %></td>
+                <td><%= photos[i].lieu %></td>
+                <td><%= photos[i].lat %></td>
+                <td><%= photos[i].long %></td>
+             </tr>
+        </div>
+     <% } %>
+</body>
+</html>
