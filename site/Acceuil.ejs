@@ -1,0 +1,31 @@
+<html>
+<header><title>Acceuil</title></header>
+<body>
+    <script src="server.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        /*
+        function callConnection(){
+            var login = document.getElementById("login").value;
+            var password = document.getElementById("password").value;
+            $.get('connexion');
+        }
+        */
+        function callConnection(){
+            var login = document.getElementById("login").value;
+            var password = document.getElementById("password").value;
+            var url = "http://localhost:3000/connexion?login="+login+"&password="+password;
+            window.location.href = (url);
+        }
+    </script>
+    
+    Accueil : Bienvenue dans PhotoSpace, le site de stockage en ligne de vos photos
+    
+    <form action="getPhotos" method="get">
+        <input type="text" id="login"/>
+        <input type="text" id="password"/>
+        <input type="button" value="Connexion" id="connection" onclick="callConnection()"/>
+    </form>
+    
+</body>
+</html>
